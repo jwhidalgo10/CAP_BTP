@@ -1,5 +1,5 @@
 using {com.logali as logali} from '../db/schema';
-//using com.training as training from '../db/training';
+using com.training as training from '../db/training';
 
 define service CatalogService {
     entity Orders as
