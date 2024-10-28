@@ -1,0 +1,42 @@
+### Get Orders
+GET http://localhost:4004/odata/v4/manage-orders/GetOrders
+
+### Get Orders with filter
+GET http://localhost:4004/odata/v4/manage-orders/GetOrders('jwhidalgo10@gmail.com')
+
+### Create Order
+POST http://localhost:4004/odata/v4/manage-orders/CreateOrder HTTP/1.1
+Content-Type: application/json
+
+{
+"id":"3",
+"email":"jwhidalgo10@gmail.com",
+"firstname":"Prueba",
+"lastname":"SRV",
+"country":"Guatemala",
+"createon":"2024-10-10",
+"deliverydate":"2024-01-26T13:51:50.417-07:00",
+"orderstatus":1
+}
+
+### Update Order
+PUT http://localhost:4004/odata/v4/manage-orders/UpdateOrder('2') HTTP/1.1
+Content-Type: application/json
+
+{
+"email":"jwhidalgo10@hotmail.com",
+"firstname":"jhona",
+"lastname":"hidalgo",
+"country":"guatemala",
+"deliverydate":"2024-02-01T13:51:50.417-07:00",
+"orderstatus":1
+}
+
+### Delete Order
+DELETE http://localhost:4004/odata/v4/manage-orders/DeleteOrder('2')
+
+### Cancel Order
+POST http://localhost:4004/odata/v4/manage-orders/cancelOrder
+Content-Type: application/json
+
+{ "id" : "1" }
